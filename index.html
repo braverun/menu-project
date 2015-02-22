@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beer Menu</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="beer-menu-header"></header>
+  <div class="menu-container">
+
+  <div class="js-sticky-containers sticky-containers">
+    <div class="category-sidebar sub-containers">
+    <ul>
+      <li><a href="#lagers">Lagers</a></li>
+      <li><a href="#pale-ales">Pale Ales</a></li>
+      <li><a href="#ipas">IPAs</a></li>
+      <li><a href="#stouts">Stouts</a></li>
+      <li><a href="#belgians">Belgians</a></li>
+      </ul>
+    </div>
+    <div class="cart sub-containers">
+      <h2>Cart</h2>
+    </div>
+  </div>
+
+    <div class="menu-list sub-containers">
+      <h2 id="lagers">Lagers</h2>
+      <ul class="js-lagers"></ul>
+      <h2 id="pale-ales">Pale Ales</h2>
+      <h2 id="ipas">IPAs</h2>
+      <h2 id="stouts">Stouts</h2>
+      <h2 id="belgians">Belgians</h2>
+    </div>
+  </div>
+
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/backbone/backbone.js"></script>
+<script src="bower_components/sticky/jquery.sticky.js"></script>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

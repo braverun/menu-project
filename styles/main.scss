@@ -1,0 +1,73 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+$background-color: #EBEAD8;
+$bottom-border-color: #581907;
+$primary-color: #DE7D1D;
+$secondary-color: #BC4B11;
+
+a{
+  color: $primary-color;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+ul{
+  margin: auto;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  border-bottom: solid $bottom-border-color 2px;
+  padding: 6px;
+}
+
+h2 {
+  margin-bottom: 300px;
+  border-bottom: solid $bottom-border-color 3px;
+  color: $primary-color;
+}
+
+.beer-menu-header {
+  background-image: url('../images/header-image.jpg');
+  background-position: bottom center;
+  background-size: cover;
+  height: 475px;
+}
+
+.menu-container {
+  background-image: url('../images/beer-background.jpg');
+  background-position: center center;
+  padding-top: 25px;
+  text-align: center;
+  height: 1700px;
+}
+
+.sub-containers {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 auto;
+  border: solid $secondary-color 6px;
+  background-color: $background-color;
+
+}
+
+.category-sidebar {
+  width: 202px;
+  height: 202px;
+  margin-right: 810px;
+  margin-left: 14px;
+}
+
+.menu-list {
+  width: 800px;
+  height: 1600px;
+  margin-top: -202px;
+}
+
+.cart {
+  width: 202px;
+  height: 202px;
+}
