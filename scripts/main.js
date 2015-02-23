@@ -14,11 +14,22 @@
   var MenuCollection = Backbone.Collection.extend({
     url: 'https://api.parse.com/1/classes/menuItems',
     model: MenuItem,
+
+    parse: function(response){
+      console.log(response);
+    return response.results;
+  }
+
   });
 
 
 
   var MenuView = Backbone.View.extend({
+    template: _.template($('[data-template-name=beers]').text()),
+
+    render: function(){
+      $('.js-lagers').html(this.template(this.model.toJSON()));
+    }
 
   });
 
@@ -27,9 +38,23 @@
       '': 'index'
     },
 
+    initialize: function(){
+
+      this.menuCollection = new MenuCollection();
+      this.menu = new MenuView({collection: this.menuCollection});
+    },
+
     index: function(){
+      var self = this;
+      this.menuCollection.fetch().done(function(){
+          self.menu.render();
+
+      });
+
+
 
     },
+
 
   });
 
